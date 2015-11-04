@@ -14,7 +14,7 @@ angularApp.config(['$routeProvider', '$translateProvider','$httpProvider',functi
 		    'entity.Team.name': 'Team Name',
 		    'entity.Team.players': 'Players of team'
 		  });
-	
+	 $translateProvider.preferredLanguage('en');
 	generateRoute($routeProvider);
 	$routeProvider.when('/',{templateUrl: 'templates/main.html', controller : 'MainCtrl'})
 	.otherwise({redirectTo: '/'});
