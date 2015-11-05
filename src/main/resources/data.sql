@@ -1,10 +1,14 @@
-insert into player (id, name) values (1, 'Jason');
-insert into player (id, name) values (2, 'Ruby');
-insert into player (id, name) values (3, 'Ashley');
-insert into player (id, name) values (4, 'Jason');
-insert into player (id, name) values (5, 'Marie');
-insert into player (id, name) values (6, 'Nicole');
-insert into player (id, name) values (7, 'Kathryn');
+insert into team (id, name) values (1, 'super team');
+insert into team (id, name) values (2, 'ubber team');
+insert into team (id, name) values (3, 'chaos team');
+
+insert into player (id, name, idteam) values (1, 'Jason', 1 );
+insert into player (id, name, idteam) values (2, 'Ruby', 1);
+insert into player (id, name, idteam) values (3, 'Ashley', 1);
+insert into player (id, name, idteam) values (4, 'Jason' , 2);
+insert into player (id, name, idteam) values (5, 'Marie', 2);
+insert into player (id, name, idteam) values (6, 'Nicole', 3);
+insert into player (id, name, idteam) values (7, 'Kathryn',3);
 insert into player (id, name) values (8, 'Jean');
 insert into player (id, name) values (9, 'Patrick');
 insert into player (id, name) values (10, 'Tammy');
