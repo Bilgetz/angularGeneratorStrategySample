@@ -4,6 +4,15 @@ angularApp.run(['$rootScope', '$translate',function($rootScope, $translate) {
 	$rootScope.alerts = [];
 	$rootScope.locales= [];
 	$rootScope.locale= "";
+	
+	$rootScope.addAlert = function(alert) {
+		$rootScope.alerts.push(alert);
+    };
+
+	  $rootScope.closeAlert = function(index) {
+		  $rootScope.alerts.splice(index, 1);
+	  };
+	
 }]);
 
 angularApp.config(['$routeProvider', '$translateProvider','$httpProvider',function($routeProvider, 	$translateProvider,$httpProvider) {
@@ -12,7 +21,10 @@ angularApp.config(['$routeProvider', '$translateProvider','$httpProvider',functi
 		 	'entity.Player.name': 'Player Name',
 		 	'entity.Player.team': 'Team of player',
 		    'entity.Team.name': 'Team Name',
-		    'entity.Team.players': 'Players of team'
+		    'entity.Team.players': 'Players of team',
+		    'angular.edit.reset': 'Reset',
+		    'angular.edit.cancel': 'Cancel',
+		    'angular.edit': 'Edit'
 		  });
 	 $translateProvider.preferredLanguage('en');
 	generateRoute($routeProvider);
