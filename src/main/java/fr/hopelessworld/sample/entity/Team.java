@@ -1,6 +1,6 @@
 package fr.hopelessworld.sample.entity;
 
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,5 +20,5 @@ public class Team {
 	private String name;
 
 	@OneToMany(mappedBy = "team")
-	private Set<Player> players;
+	private List<Player> players;
 }
