@@ -1,6 +1,5 @@
 var angularApp = angular.module('sampleApp',['ngAnimate','ngRoute', 'ngResource','spring-data-rest','ui.bootstrap','ngSanitize','pascalprecht.translate']);
 angularApp.run(['$rootScope', '$translate',function($rootScope, $translate) {
-	$rootScope.page = {};
 	$rootScope.alerts = [];
 	$rootScope.locales= [];
 	$rootScope.locale= "";
